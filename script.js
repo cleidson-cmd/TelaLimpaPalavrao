@@ -6,6 +6,7 @@ var basePalavrao = ["porra", "caralho", "puto", "puta", "misera", "viado", "corn
 var digitos;
 var qtdPalavraoR = 0;
 var msgPalavraoR = document.getElementById("removePalavrao");
+var msgPalavraoR2 = document.getElementById("palavraoRemove");
 
 texto.addEventListener('keypress', (e)=>{
     digitos =  texto.value.length;
@@ -40,8 +41,9 @@ botao.addEventListener('click', () =>{
             }
         }
         var resposta = qtdPalavraoR > 0 ? "Foram removidos" : "Sua frase já está limpinha ;)";
-        var temp = qtdPalavraoR + " Palavrões";
-        msgPalavraoR.innerText = temp +" "+ resposta;
+        var temp = qtdPalavraoR + " Palavrões ";
+        msgPalavraoR.innerText = temp;
+        msgPalavraoR2.innerText = resposta;
         texto.value = textAreaArray.join(" ");
         
     }else{
