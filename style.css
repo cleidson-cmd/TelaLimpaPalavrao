@@ -37,10 +37,11 @@ h1{
     font-family: sans-serif;
     font-size: 11px;
     padding-bottom: 25px;
-    color: rgb(27, 194, 27);
+    color: rgb(8, 14, 8);
 }
 
 #removePalavrao{
+    justify-content: left;
     color: rgb(27, 212, 42);
 }
 
