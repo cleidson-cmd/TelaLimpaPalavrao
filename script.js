@@ -4,7 +4,8 @@ var contador = document.getElementById("contador");
 var botao = document.getElementById("btn");
 var basePalavrao = ["porra", "caralho", "puto", "puta", "misera", "viado", "corno", "vagabundo"]
 var digitos;
-
+var qtdPalavraoR = 0;
+var msgPalavraoR = document.getElementById("removePalavrao");
 
 texto.addEventListener('keypress', (e)=>{
     digitos =  texto.value.length;
@@ -32,28 +33,19 @@ botao.addEventListener('click', () =>{
         for (var i = 0; i <= basePalavrao.length; i ++){
             for (var y = 0; y <= basePalavrao.length; y ++){
                 if (textAreaArray[y] === basePalavrao[i] & textAreaArray[y] != null){
-                    //console.log(basePalavrao[i], textAreaArray[y]);
-                    //textAreaArray[y].replace(/textAreaArray[y]/gi, '***');
-                    textAreaArray[y] = "***";
-                    console.log(basePalavrao[i], textAreaArray[y]);                    
-                }else{
-                    console.log(basePalavrao[i], textAreaArray[y]);
+                    qtdPalavraoR ++;
+                    textAreaArray[y] = "***";                                       
                 }
                
             }
         }
-        console.log(textAreaArray);
-        //texto.innerText = textAreaArray.join(" ");
-
+        var resposta = qtdPalavraoR > 0 ? "Foram removidos" : "Sua frase já está limpinha ;)";
+        var temp = qtdPalavraoR + " Palavrões";
+        msgPalavraoR.innerText = temp +" "+ resposta;
+        texto.value = textAreaArray.join(" ");
+        
     }else{
-        location.reload();
-        //botao.value = "Limpar frase"
-        //subtitulo.innerText = "Digite a sua frase"
-        //botao.style.backgroundColor = "rgb(89, 131, 209)";
-        //subtitulo.style.color = "rgb(89, 131, 209)";
-        //botao.style.borderColor = "rgb(89, 131, 209)";
-        //texto.style.borderColor = "black"       
-              
+        location.reload();        
     }
     
 })
