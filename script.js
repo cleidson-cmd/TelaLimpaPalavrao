@@ -2,7 +2,7 @@ var texto = document.getElementById("texto");
 var subtitulo = document.getElementById("subtitulo");
 var contador = document.getElementById("contador");
 var botao = document.getElementById("btn");
-var basePalavrao = ["porra", "caralho", "puto", "puta", "misera", "viado", "corno", "vagabundo"]
+var basePalavrao = ["porra", "caralho", "puto", "puta", "misera", "viado", "corno", "vagabundo","cu", "cú", "miseria"]
 var digitos;
 var qtdPalavraoR = 0;
 var msgPalavraoR = document.getElementById("removePalavrao");
